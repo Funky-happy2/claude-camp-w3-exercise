@@ -1,2 +1,2 @@
 # claude-camp-w3-exercise
-Code I made for week 2 of this camp
+Code I made for week 3 of this camp
