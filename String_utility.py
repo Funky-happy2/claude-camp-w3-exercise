@@ -9,32 +9,33 @@ def is_palindrome(s):
     return cleaned_string == cleaned_string[::-1]
 
 # Build a loop that won't break until the user types "exit"
-while True:
-    # Ask user for a function to perform on a string
-    user_input = input("Enter a string function (reverse_words, count_vowels, is_palindrome), 'exit' to quit): ")
+def main():
+    while True:
+        # Ask user for a function to perform on a string
+        user_input = input("Enter a string function (reverse_words, count_vowels, is_palindrome), 'exit' to quit): ")
 
-    # Clean the input
-    user_input = user_input.strip().lower()
-
-    # Do action based on user input
-    if user_input == "exit":
-        print("Exiting the program. Goodbye!")
-        break
-    #Reverse words, not letters in a string
-    elif user_input == "reverse_words":
-        string_to_reverse = input("Enter a string to reverse words: ")
-        reversed_string = reverse_words(string_to_reverse)
-        print(f"String with reversed words: {reversed_string}")
-    elif user_input == "count_vowels":
-        string_to_count = input("Enter a string to count vowels: ")
-        count = count_vowels(string_to_count)
-        print(f"Number of vowels in the string: {count}")
-    elif user_input == "is_palindrome":
-        string_to_check = input("Enter a string to check if it's a palindrome: ")
-        is_palindrome = is_palindrome(string_to_check)
-        if is_palindrome:
-            print(f"The string '{string_to_check}' is a palindrome.")
+        # Do action based on user input
+        if user_input == "exit":
+            print("Exiting the program. Goodbye!")
+            break
+        #Reverse words, not letters in a string
+        elif user_input == "reverse_words":
+            string_to_reverse = input("Enter a string to reverse words: ")
+            reversed_string = reverse_words(string_to_reverse)
+            print(f"String with reversed words: {reversed_string}")
+        elif user_input == "count_vowels":
+            string_to_count = input("Enter a string to count vowels: ")
+            count = count_vowels(string_to_count)
+            print(f"Number of vowels in the string: {count}")
+        elif user_input == "is_palindrome":
+            string_to_check = input("Enter a string to check if it's a palindrome: ")
+            result = is_palindrome(string_to_check)
+            if result:
+                print(f"The string '{string_to_check}' is a palindrome.")
+            else:
+                print(f"The string '{string_to_check}' is not a palindrome.")
         else:
-            print(f"The string '{string_to_check}' is not a palindrome.")
-    else:
-        print("Invalid function. Please try again.")
+            print("Invalid function. Please try again.")
+
+if __name__ == "__main__":
+    main()
