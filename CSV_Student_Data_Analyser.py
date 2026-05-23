@@ -63,7 +63,6 @@ while True:
     elif action == 'read':
         # Try to read the CSV file and display contents, if file doesn't exist, catch the error and print a message
         try:
-            import csv
             with open('students.csv', 'r') as file:
                 reader = csv.DictReader(file)
                 students = list(reader)
